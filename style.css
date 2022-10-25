@@ -1,0 +1,33 @@
+*{
+    text-align: center;
+    background-color: lightseagreen;
+}
+
+h1{
+    text-shadow: 1px 2px black;
+    color: blueviolet;
+    
+}
+.center{
+    margin-left: auto;
+    margin-right: auto;   
+}
+
+table, td {
+    border:1px solid black;
+    background-color: lightsalmon;
+    
+}
+
+th {
+    border: 2px solid black;
+    background-color: pink;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+}
+img{
+    box-shadow: 5px 5px black;
+}

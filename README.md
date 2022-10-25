@@ -1,2 +1,5 @@
-# lihtne-veebileht
-Sissejuhatus erialasse kursuse veebileht
+# Sissejuhatus erialasse grupiprojekt
+by
+Gregor
+Oliver
+Markus
