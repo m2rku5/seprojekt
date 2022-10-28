@@ -3,3 +3,5 @@ by
 Gregor
 Oliver
 Markus
+Mingi tekst
+Proovin lisada
