@@ -1,31 +1,64 @@
 <!DOCTYPE html>
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Avaleht</title>
+<html lang="et">
+<head>
+    <meta charset="UTF-8" content="width=device-width, initial-scale=1.0">
+    <title>Avaleht</title>
+    <link rel="stylesheet" href="style.css">
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"/>
+    <link
+        rel="stylesheet" 
+        href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap"/>
 </head>
-<link rel="stylesheet" href="style.css">
 <body>
+    <form id="task_form" class="todo">
+        <label class="tasks" for="task_name">Tegevuse nimi: </label>
+        <input class="tulbad" type="text" id="task_name" name="task_name"><br><br>
+        <label class="tasks" for="task_date">Tähtaeg: </label>
+        <input class="tulbad" type="text" id="task_date" name="task_date"><br><br>
+        <label class="tasks" for="task_cat">Kategooria: </label>
+        <select  class="tasks" id="task_cat" name="task_cat"> 
+            <option value="Kool">Kool</option>
+            <option value="Tervis">Tervis</option>
+            <option value="Töö">Töö</option>
+            <option value="Muu">Muu</option>
+        </select>  <br><br>
+        <label class="tasks" for="task_desc">Tegevuse kirjeldus: </label>
+        <input class="tulbad" type="text" id="task_desc" name="task_desc"><br><br>
+        <input class="lisa" type="submit" value="Lisa"><br><br>
+    </form>
 
-<form id="task_form">
-    <label for="task_name">Tegevuse nimi: </label>
-    <input type="text" id="task_name" name="task_name"><br><br>
-    <label for="task_date">Tähtaeg: </label>
-    <input type="text" id="task_date" name="task_date"><br><br>
-    <label for="task_cat">Kategooria: </label>
-    <select id="task_cat" name="task_cat"> 
-        <option value="Kool">Kool</option>
-        <option value="Tervis">Tervis</option>
-        <option value="Töö">Töö</option>
-        <option value="Muu">Muu</option>
-    </select>  <br><br>
-    <label for="task_desc">Tegevuse kirjeldus: </label>
-    <input type="text" id="task_desc" name="task_desc"><br><br>
-    <input type="submit" value="Lisa"><br><br>
-</form>
-
-<button id="del">Kustuta kõik andmed</button>
-
-<p id="loc"></p>
+    <button class="del" id="del">Kustuta kõik andmed</button>
+    <br><br>
+    <p class="valjund_tasks" id="loc"></p>
 
 
-<script src="script.js"></script>
-</body></html>
+    <div class="container">
+        <div class="kalender">
+          <div class="kuud">
+            <i class="fas fa-angle-left prev"></i>
+            <div class="kuupaev">
+              <h1></h1>
+              <p></p>
+            </div>
+            <i class="fas fa-angle-right next"></i>
+          </div>
+          <div class="nadalapaevad">
+            <div>Esm</div>
+            <div>Teis</div>
+            <div>Kol</div>
+            <div>Nel</div>
+            <div>Ree</div>
+            <div>Laup</div>
+            <div>Pyh</div>
+          </div>
+          <div class="paevade_numbrid"></div>
+        </div>
+      </div>
+  
+      <script src="script.js"></script>
+
+</body>
+</html>
+    
