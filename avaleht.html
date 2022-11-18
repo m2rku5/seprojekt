@@ -12,26 +12,39 @@
         href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap"/>
 </head>
 <body>
-    <form id="task_form" class="todo">
-        <label class="tasks" for="task_name">Tegevuse nimi: </label>
-        <input class="tulbad" type="text" id="task_name" name="task_name"><br><br>
-        <label class="tasks" for="task_date">Tähtaeg: </label>
-        <input class="tulbad" type="text" id="task_date" name="task_date"><br><br>
-        <label class="tasks" for="task_cat">Kategooria: </label>
-        <select  class="tasks" id="task_cat" name="task_cat"> 
-            <option value="Kool">Kool</option>
-            <option value="Tervis">Tervis</option>
-            <option value="Töö">Töö</option>
-            <option value="Muu">Muu</option>
-        </select>  <br><br>
-        <label class="tasks" for="task_desc">Tegevuse kirjeldus: </label>
-        <input class="tulbad" type="text" id="task_desc" name="task_desc"><br><br>
-        <input class="lisa" type="submit" value="Lisa"><br><br>
-    </form>
 
-    <button class="del" id="del">Kustuta kõik andmed</button>
-    <br><br>
-    <p class="valjund_tasks" id="loc"></p>
+	<div class="row">
+		<div class="column">
+			<form id="task_form" class="todo">
+				<label class="tasks" for="task_name">Tegevuse nimi: </label>
+				<input class="tulbad" type="text" id="task_name" name="task_name"><br><br>
+				<label class="tasks" for="task_date">Tähtaeg: </label>
+				<input class="tulbad" type="text" id="task_date" name="task_date"><br><br>
+				<label class="tasks" for="task_cat">Kategooria: </label>
+				<select  class="tasks" id="task_cat" name="task_cat"> 
+					<option value="Kool">Kool</option>
+					<option value="Tervis">Tervis</option>
+					<option value="Töö">Töö</option>
+					<option value="Muu">Muu</option>
+				</select>  <br><br>
+				<label class="tasks" for="task_desc">Tegevuse kirjeldus: </label>
+				<input class="tulbad" type="text" id="task_desc" name="task_desc"><br><br>
+				<button class="lisa" type="button" onclick="submit_form()">Lisa</button><br><br>
+			</form>
+		</div>
+
+		<div class="column">
+			<table id="data_table">
+				<tr>
+					<th>Nimi</th>
+					<th>Tähtaeg</th>
+					<th>Kategooria</th>
+					<th>Kirjeldus</th>
+				</tr>
+			</table>
+		</div>
+	</div>
+
 
 
     <div class="container">
@@ -56,9 +69,10 @@
           <div class="paevade_numbrid"></div>
         </div>
       </div>
-  
-      <script src="script.js"></script>
 
+	  <script src="script_gregor.js"></script>
+	  <script src="script_markus.js"></script>
+	  <script src="script_oliver.js"></script>
 </body>
 </html>
     
