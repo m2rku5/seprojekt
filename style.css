@@ -37,7 +37,7 @@ html {
 
 .container{
     width: 100%;
-    height: 100vh;
+    height: 60vh;
     background-color: blanchedalmond;
     color: black;
     display: flex;
@@ -163,4 +163,11 @@ td {
 th {
 	padding-left: 20px;
 	padding-right: 20px;
+}
+
+.motivatsioon {
+    margin-top: 20px;
+    margin-bottom: 40px;
+    font-size: 300%;
+    text-shadow: 2px 1px rgb(165,206,172);
 }
