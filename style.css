@@ -40,7 +40,7 @@ html {
     height: 60vh;
     background-color: blanchedalmond;
     color: black;
-    display: flex;
+    display: grid;
     justify-content: center;
     align-items: center;
 }
