@@ -4,7 +4,7 @@
         "Sinu elu on sinu vastutus",
         "Anna oma parim, sellest piisab!",
         "Su vanemad ei kasvatanud sind 18 aastat, et sa oleksid lihtsalt pettumus",
-        "Kogu julgust ja asu asja kallale :)",
+        "Kogu julgust ja asu asja kallale :)test",
         "Motivatsiooni pole olemas, võta end lihtsalt kokku",
         "Mis ei ole kalendris, see ei saa tehtud",
         "100 aastat tagasi käisid sinuvanused sõjas... kas nad surid, et sa saaks lolli mängida?",
