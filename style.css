@@ -9,7 +9,7 @@
 
 html {
     font-size: 64%;
-  }
+}
 .todo{
     display: grid;
     justify-content: center;
@@ -49,6 +49,8 @@ html {
     height: 52rem;
     background-color: blanchedalmond;
     box-shadow: 0 0.5rem 3rem rgba(0, 0, 0, 0.4);
+    position: relative;
+    left: 290px;
 }
 .kuud {
 width: 100%;
