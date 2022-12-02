@@ -1,33 +1,33 @@
-const date = new Date();
+const date = new Date(); // Saab praeguse kuupäeva.
 
 const renderCalendar = () => {
   date.setDate(1);
 
-  const monthDays = document.querySelector(".paevade_numbrid");
+  const päevad_kuus = document.querySelector(".paevade_numbrid");
 
-  const lastDay = new Date(
+  const mitu_paeva_kuus = new Date( // muutuja, mille väärtuseks on kuu viimane kuupäev
     date.getFullYear(),
     date.getMonth() + 1,
     0
   ).getDate();
 
-  const prevLastDay = new Date(
+  const paevi_eelmises_kuus = new Date( // eelmise kuu viimane kuupäve
     date.getFullYear(),
     date.getMonth(),
     0
   ).getDate();
 
-  const firstDayIndex = date.getDay();
+  const esimese_p_index = date.getDay(); // mis nädalapäeval on kuu esimene päev
 
-  const lastDayIndex = new Date(
+  const viimase_p_index = new Date(
     date.getFullYear(),
     date.getMonth() + 1,
     0
   ).getDay();
 
-  const nextDays = 7 - lastDayIndex - 1;
+  const nextDays = 7 - viimase_p_index - 1;
 
-  const months = [
+  const kuud = [
     "Jaanuar",
     "Veebruar",
     "Märts",
@@ -42,42 +42,44 @@ const renderCalendar = () => {
     "Detsember",
   ];
 
-  document.querySelector(".kuupaev h1").innerHTML = months[date.getMonth()];
+  document.querySelector(".kuupaev h1").innerHTML = kuud[date.getMonth()];  // Kuvab kalendri päises praeguse kuu
 
-  document.querySelector(".kuupaev p").innerHTML = new Date().toLocaleDateString();
+  document.querySelector(".kuupaev p").innerHTML = new Date().toLocaleDateString(); // Kuvab kuupäeva pikemalt
 
-  let days = "";
+  let kuupäeva_nr = "";
 
-  for (let x = firstDayIndex; x > 1; x--) {
-    days += `<div class="prev-date">${prevLastDay - x + 1}</div>`;
+  for (let x = esimese_p_index; x > 1; x--) {  // täidab kalendri esimese rea eelmise kuu päevadega
+    kuupäeva_nr += `<div class="prev-date">${paevi_eelmises_kuus - x + 1}</div>`;
   }
 
-  for (let i = 1; i <= lastDay; i++) {
+  for (let i = 1; i <= mitu_paeva_kuus; i++) {  // tsükkel, mis paneb kalendrisse õiged päevad, ja highlightib tänase päeva
     if (
       i === new Date().getDate() &&
       date.getMonth() === new Date().getMonth()
     ) {
-      days += `<div class="tana">${i}</div>`;
+      kuupäeva_nr += `<div class="tana">${i}</div>`;
     } else {
-      days += `<div>${i}</div>`;
+      kuupäeva_nr += `<div>${i}</div>`;
     }
   }
    
-  for (let j = 1; j <= nextDays; j++) {
-    days += `<div class="next-date">${j}</div>`;
-    monthDays.innerHTML = days;
+  for (let j = 1; j <= nextDays; j++) { // täidab kalendri viimase rea järgmise kuu päevadega
+    kuupäeva_nr += `<div class="next-date">${j}</div>`;
+    päevad_kuus.innerHTML = kuupäeva_nr;
   }
 };
 
-document.querySelector(".prev").addEventListener("click", () => {
+document.querySelector(".prev").addEventListener("click", () => { // vajutusel loob uue kalendri eelmise kuuga
   date.setMonth(date.getMonth() - 1);
   renderCalendar();
 });
 
-document.querySelector(".next").addEventListener("click", () => {
+document.querySelector(".next").addEventListener("click", () => {  // vajutusel loob uue kalendri järgmise kuuga
   date.setMonth(date.getMonth() + 1);
   renderCalendar();
 });
 
 
 renderCalendar();
+
+// inspiratsioon: https://youtu.be/o1yMqPyYeAo
