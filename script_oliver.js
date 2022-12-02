@@ -65,8 +65,8 @@ const renderCalendar = () => {
    
   for (let j = 1; j <= nextDays; j++) { // täidab kalendri viimase rea järgmise kuu päevadega
     kuupäeva_nr += `<div class="next-date">${j}</div>`;
-    päevad_kuus.innerHTML = kuupäeva_nr;
   }
+  päevad_kuus.innerHTML = kuupäeva_nr
 };
 
 document.querySelector(".prev").addEventListener("click", () => { // vajutusel loob uue kalendri eelmise kuuga
