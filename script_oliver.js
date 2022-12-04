@@ -1,5 +1,7 @@
 const date = new Date(); // Saab praeguse kuupäeva.
 
+const taskid = []
+
 const renderCalendar = () => {
   date.setDate(1);
 
@@ -48,17 +50,43 @@ const renderCalendar = () => {
 
   let kuupäeva_nr = "";
 
+
   for (let x = esimese_p_index; x > 1; x--) {  // täidab kalendri esimese rea eelmise kuu päevadega
     kuupäeva_nr += `<div class="prev-date">${paevi_eelmises_kuus - x + 1}</div>`;
   }
 
-  for (let i = 1; i <= mitu_paeva_kuus; i++) {  // tsükkel, mis paneb kalendrisse õiged päevad, ja highlightib tänase päeva
-    if (
+  for (let i = 1; i <= mitu_paeva_kuus; i++) {  // tsükkel, mis paneb kalendrisse õiged päevad.
+    for (let k = 0; k < localStorage.length; k++){
+      try {
+      var nimi = localStorage.key(k);        //  Võtab localstoragest ülesanded ja lisab kalendrisse märke
+      var kuupaev = localStorage.getItem(nimi).split(",");
+      var kp = kuupaev[1].split("-")
+      var paev = kp[2]
+      var kuu = kp[1]
+      }
+      catch(no_event){
+        paev = 0
+        kuu = 0
+      }
+      if (
+        i == paev && 
+        parseInt(date.getMonth()+1) == parseInt(kuu)
+        ){
+          taskid.push(paev)
+          kuupäeva_nr += `<div class="tasklist">${i}</div>`;
+      }
+    }
+    if (    //  highlightib tänase päeva
       i === new Date().getDate() &&
       date.getMonth() === new Date().getMonth()
     ) {
+
       kuupäeva_nr += `<div class="tana">${i}</div>`;
-    } else {
+    }
+    else if (i in taskid) {
+
+    }
+    else{    //  genereerib ülejäänud kalendri
       kuupäeva_nr += `<div>${i}</div>`;
     }
   }
@@ -67,6 +95,7 @@ const renderCalendar = () => {
     kuupäeva_nr += `<div class="next-date">${j}</div>`;
   }
   päevad_kuus.innerHTML = kuupäeva_nr
+
 };
 
 document.querySelector(".prev").addEventListener("click", () => { // vajutusel loob uue kalendri eelmise kuuga

@@ -19,11 +19,13 @@ function submit_form() {										// Sisestab andmed ja täidab tabeli
 
 	if (not_error){
 		localStorage.setItem(name, array);
+		viimaneSisestus = name
 		add_row(array)
 
 		task_form.elements["task_name"].value = ""
 		task_form.elements["task_date"].value = ""
 		task_form.elements["task_desc"].value = ""
+		renderCalendar()
 	}
 };
 
@@ -41,6 +43,7 @@ function delete_row(nr){										// Kustutab rea
 	let name = document.getElementById("name_row"+nr).innerHTML
 	localStorage.removeItem(name);
 	document.getElementById("row"+nr).outerHTML="";
+	renderCalendar()
 }
 
 function add_row(array){										// Lisab rea
