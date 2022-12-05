@@ -26,6 +26,7 @@ function submit_form() {										// Kirjutanud Gregor - Võtab sisestatud andme
 		task_form.elements["task_date"].value = ""
 		task_form.elements["task_desc"].value = ""
 		renderCalendar()
+		location.reload();
 	}
 };
 
@@ -149,7 +150,9 @@ const renderCalendar = () => {
   }
 
   for (let i = 1; i <= mitu_paeva_kuus; i++) {  // tsükkel, mis paneb kalendrisse õiged päevad.
-    for (let k = 0; k < localStorage.length; k++){
+    let not_used = true;
+	
+	for (let k = 0; k < localStorage.length; k++){
       try {
       var nimi = localStorage.key(k);        //  Võtab localstoragest ülesanded ja lisab kalendrisse märke
       var kuupaev = localStorage.getItem(nimi).split(",");
@@ -163,15 +166,16 @@ const renderCalendar = () => {
       }
       if (
         i == paev && 
-        parseInt(date.getMonth()+1) == parseInt(kuu)
+        parseInt(date.getMonth()+1) == parseInt(kuu) && not_used
         ){
+		  not_used = false;
           taskid.push(paev)
           kuupäeva_nr += `<div class="tasklist">${i}</div>`;
       }
     }
     if (    //  highlightib tänase päeva
       i === new Date().getDate() &&
-      date.getMonth() === new Date().getMonth()
+      date.getMonth() === new Date().getMonth() && not_used
     ) {
 
       kuupäeva_nr += `<div class="tana">${i}</div>`;
@@ -179,7 +183,7 @@ const renderCalendar = () => {
     else if (i in taskid) {
 
     }
-    else{    //  genereerib ülejäänud kalendri
+    else if(not_used){    //  genereerib ülejäänud kalendri
       kuupäeva_nr += `<div>${i}</div>`;
     }
   }
