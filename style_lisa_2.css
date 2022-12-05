@@ -1,0 +1,20 @@
+html {
+    display: table;
+    margin: auto;
+}
+
+body {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+h1 {
+	font-size: 40px;
+	padding-top: 20px;
+}
+
+img {
+	padding: 20px;
+	height: 400px;
+	border-radius: 20%;
+}

@@ -1,0 +1,190 @@
+
+.todo{
+    display: grid;
+    margin-left: 50px;
+}
+
+.tulbad{
+    background-color: rgb(255, 255, 255);
+
+}
+.tasks{
+    font-size: 150%;
+    background-color: blanchedalmond;
+    text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.3);
+}
+.valjund_tasks{
+    font-size: 200%;
+    text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.3);
+    
+}
+.lisa{
+    background-color: rgba(4, 138, 89, 0.4);
+}
+.del{
+    background-color: rgb(244, 120, 120); 
+}
+
+
+.container{
+    width: 100%;
+    height: 60vh;
+    background-color: blanchedalmond;
+    color: black;
+    display: flex;
+    justify-content: center;
+    float: right;
+    margin: 20px;
+    
+}
+.kalender {
+    width: 45rem;
+    height: 50rem;
+    background-color: blanchedalmond;
+    box-shadow: 0 0.5rem 3rem rgba(0, 0, 0, 0.4);
+    
+}
+.kuud {
+width: 100%;
+height: 12rem;
+background-color: rgb(0,0,0,0.4);
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 0 2rem;
+text-align: center;
+text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.4);
+}
+
+.kuud i {
+background-color:  rgba(0, 0, 0, 0);
+font-size: 2.5rem;
+cursor: pointer;
+}
+
+.kuud h1 {
+background-color:  rgba(0, 0, 0, 0.4);
+font-size: 3rem;
+font-weight: 400;
+text-transform: uppercase;
+letter-spacing: 0.2rem;
+
+}
+
+.kuud p {
+background-color:  rgba(0, 0, 0, 0.4);
+font-size: 1.6rem;
+}
+
+.nadalapaevad {
+width: 100%;
+height: 5rem;
+padding: 0 0.4rem;
+display: flex;
+align-items: center;
+}
+
+.nadalapaevad div {
+font-size: 1.5rem;
+font-weight: 400;
+letter-spacing: 0.1rem;
+width: calc(44.2rem / 7);
+display: flex;
+justify-content: center;
+align-items: center;
+text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.5);
+}
+
+.paevade_numbrid {
+width: 100%;
+display: flex;
+flex-wrap: wrap;
+padding: 0.2rem;
+}
+
+.paevade_numbrid div {
+font-size: 1.4rem;
+margin: 0.3rem;
+width: calc(40.2rem / 7);
+height: 5rem;
+display: flex;
+justify-content: center;
+align-items: center;
+text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.5);
+transition: background-color 0.2s;
+}
+
+.paevade_numbrid div:hover {
+background-color: #6969696f;
+border: 0.2rem solid rgba(119, 119, 119, 0.606);
+cursor: pointer;
+}
+
+.prev-date,
+.next-date {
+opacity: 0.5;
+}
+
+.tana {
+background-color: rgba(0,0,0,0.4);
+}
+
+.tasklist {
+    background-color: rgba(4, 138, 89, 0.4);
+}
+
+.column {
+float: left;
+width: 50%;
+height: 300px;
+margin-right: 50px;
+
+}
+
+.row:after {
+content: "";
+display: table;
+clear: both;
+}
+
+table, th, td{
+	
+	font-size: 120%;
+    text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.3);
+}
+table {
+    background-color:rgba(57, 57, 57, 0.4) ;
+}
+
+td {
+	padding-top: 5px;
+	padding-bottom: 5px;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+th {
+    background-color:rgba(57, 57, 57, 0.4) ;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+.delete {
+    background-color:rgba(151, 151, 151, 0.4);
+    border: 0.5px;
+	border: rgb(0,0,0,0.4);
+
+}
+
+.motivatsioon {
+    margin-top: 20px;
+    margin-bottom: 100px;
+    font-size: 300%;
+    text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.4);
+}
+.nupp1{
+    margin-top: 75px ;
+}
+.nupp2 {
+    margin-bottom: 25px;
+}
