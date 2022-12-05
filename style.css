@@ -12,23 +12,25 @@ html {
 }
 .todo{
     display: grid;
-    justify-content: center;
-    align-items: center;
+    margin-left: 50px;
 }
 
 .tulbad{
     background-color: rgb(255, 255, 255);
+
 }
 .tasks{
     font-size: 150%;
     background-color: blanchedalmond;
+    text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.3);
 }
 .valjund_tasks{
     font-size: 200%;
+    text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.3);
     
 }
 .lisa{
-    background-color: rgb(165, 206, 172);
+    background-color: rgba(4, 138, 89, 0.4);
 }
 .del{
     background-color: rgb(244, 120, 120); 
@@ -40,17 +42,18 @@ html {
     height: 60vh;
     background-color: blanchedalmond;
     color: black;
-    display: grid;
+    display: flex;
     justify-content: center;
-    align-items: center;
+    float: right;
+    margin: 20px;
+    
 }
 .kalender {
     width: 45rem;
-    height: 52rem;
+    height: 50rem;
     background-color: blanchedalmond;
     box-shadow: 0 0.5rem 3rem rgba(0, 0, 0, 0.4);
-    position: relative;
-    left: 290px;
+    
 }
 .kuud {
 width: 100%;
@@ -137,11 +140,16 @@ opacity: 0.5;
 background-color: rgba(0,0,0,0.4);
 }
 
+.tasklist {
+    background-color: rgba(4, 138, 89, 0.4);
+}
+
 .column {
 float: left;
 width: 50%;
-padding: 10px;
 height: 300px;
+margin-right: 50px;
+
 }
 
 .row:after {
@@ -151,8 +159,12 @@ clear: both;
 }
 
 table, th, td{
-	border: 1px solid black;
+	
 	font-size: 120%;
+    text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.3);
+}
+table {
+    background-color:rgba(57, 57, 57, 0.4) ;
 }
 
 td {
@@ -163,13 +175,26 @@ td {
 }
 
 th {
+    background-color:rgba(57, 57, 57, 0.4) ;
 	padding-left: 20px;
 	padding-right: 20px;
 }
 
+.delete {
+    background-color:rgba(151, 151, 151, 0.4);
+    border:0.5px, rgb(0,0,0,0.4)
+
+}
+
 .motivatsioon {
     margin-top: 20px;
-    margin-bottom: 40px;
+    margin-bottom: 100px;
     font-size: 300%;
-    text-shadow: 2px 1px rgb(165,206,172);
+    text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.4);
+}
+.nupp1{
+    margin-top: 75px ;
+}
+.nupp2 {
+    margin-bottom: 25px;
 }

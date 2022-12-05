@@ -19,11 +19,13 @@ function submit_form() {										// Sisestab andmed ja täidab tabeli
 
 	if (not_error){
 		localStorage.setItem(name, array);
+		viimaneSisestus = name
 		add_row(array)
 
 		task_form.elements["task_name"].value = ""
 		task_form.elements["task_date"].value = ""
 		task_form.elements["task_desc"].value = ""
+		renderCalendar()
 	}
 };
 
@@ -41,6 +43,7 @@ function delete_row(nr){										// Kustutab rea
 	let name = document.getElementById("name_row"+nr).innerHTML
 	localStorage.removeItem(name);
 	document.getElementById("row"+nr).outerHTML="";
+	renderCalendar()
 }
 
 function add_row(array){										// Lisab rea
@@ -52,7 +55,12 @@ function add_row(array){										// Lisab rea
 	let cat = array[2]
 	let desc = array[3]
 
-	table.insertRow(table_len).outerHTML="<tr id='row"+table_len+"'><td id='name_row"+table_len+"'>"+name+"</td><td>"+date+"</td><td>"+cat+"</td><td>"+desc+"</td><td><input type='button' value='Eemalda' class='delete' onclick='delete_row("+table_len+")'></td></tr>";
+	if (date == null) {
+		//  ei lisa tühja rida tabelisse
+	}
+	else {
+		table.insertRow(table_len).outerHTML="<tr id='row"+table_len+"'><td id='name_row"+table_len+"'>"+name+"</td><td>"+date+"</td><td>"+cat+"</td><td>"+desc+"</td><td><input type='button' value='Eemalda' class='delete' onclick='delete_row("+table_len+")'></td></tr>";
+	}
 }
 
    
