@@ -45,6 +45,7 @@ function delete_row(nr){										// Kirjutanud Gregor - kustutab nupuvajutusel 
 	localStorage.removeItem(name);
 	document.getElementById("row"+nr).outerHTML="";
 	renderCalendar()
+	location.reload();
 }
 
 function add_row(array){										// Kirjutanud Gregor - lisab rea tabelisse
