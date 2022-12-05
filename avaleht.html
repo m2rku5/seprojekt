@@ -16,8 +16,10 @@
 	<div>
 		<p class="motivatsioon">"<span id="lause">Teretulemast meie veebilehele! Loodame, et see aitab sul asju paremini tehtud saada</span>"</p>
 	</div>
+	
+	
+	<div class="container">
 
-	<div class="row">
 		<div class="column">
 			<form id="task_form" class="todo">
 				<label class="tasks" for="task_name">Tegevuse nimi: </label>
@@ -33,7 +35,7 @@
 				</select>  <br><br>
 				<label class="tasks" for="task_desc">Tegevuse kirjeldus: </label>
 				<input class="tulbad" type="text" id="task_desc" name="task_desc"><br><br>
-				<button class="lisa" type="button" onclick="submit_form()">Lisa</button><br><br>
+				<button class="lisa" type="button" onclick="submit_form()">Lisa tegevus</button><br><br>
 			</form>
 		</div>
 
@@ -47,40 +49,40 @@
 				</tr>
 			</table>
 		</div>
+	
+		<div class="kalender">
+			<div class="kuud">
+			<i class="fas fa-angle-left prev"></i>
+			<div class="kuupaev">
+				<h1></h1>
+				<p></p>
+			</div>
+			<i class="fas fa-angle-right next"></i>
+			</div>
+			<div class="nadalapaevad">
+			<div>Esm</div>
+			<div>Teis</div>
+			<div>Kol</div>
+			<div>Nel</div>
+			<div>Ree</div>
+			<div>Laup</div>
+			<div>Pyh</div>
+			</div>
+			<div class="paevade_numbrid"></div>
+		</div>
+
 	</div>
+	
 	<div>
-		<button onclick="window.location.href='leht2.html'">Ära siia vajuta!</button>
+		<button class="nupp1" onclick="window.location.href='leht2.html'">Ära siia vajuta!</button>
 	</div>
 	<div>
 		<br>
 		<br>
 	</div>
 	<div>
-		<button onclick="window.location.href='lisa.html'">Vajuta siia</button>
+		<button class="nupp2" onclick="window.location.href='lisa.html'">Vajuta siia</button>
 	</div>
-	
-	<div class="kalender">
-		<div class="kuud">
-		<i class="fas fa-angle-left prev"></i>
-		<div class="kuupaev">
-			<h1></h1>
-			<p></p>
-		</div>
-		<i class="fas fa-angle-right next"></i>
-		</div>
-		<div class="nadalapaevad">
-		<div>Esm</div>
-		<div>Teis</div>
-		<div>Kol</div>
-		<div>Nel</div>
-		<div>Ree</div>
-		<div>Laup</div>
-		<div>Pyh</div>
-		</div>
-		<div class="paevade_numbrid"></div>
-	</div>
-     
-	
 
 	  <script src="script_gregor.js"></script>
 	  <script src="script_markus.js"></script>

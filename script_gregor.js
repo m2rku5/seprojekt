@@ -55,7 +55,12 @@ function add_row(array){										// Lisab rea
 	let cat = array[2]
 	let desc = array[3]
 
-	table.insertRow(table_len).outerHTML="<tr id='row"+table_len+"'><td id='name_row"+table_len+"'>"+name+"</td><td>"+date+"</td><td>"+cat+"</td><td>"+desc+"</td><td><input type='button' value='Eemalda' class='delete' onclick='delete_row("+table_len+")'></td></tr>";
+	if (date == null) {
+		//  ei lisa tühja rida tabelisse
+	}
+	else {
+		table.insertRow(table_len).outerHTML="<tr id='row"+table_len+"'><td id='name_row"+table_len+"'>"+name+"</td><td>"+date+"</td><td>"+cat+"</td><td>"+desc+"</td><td><input type='button' value='Eemalda' class='delete' onclick='delete_row("+table_len+")'></td></tr>";
+	}
 }
 
    
